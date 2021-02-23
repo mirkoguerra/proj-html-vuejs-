@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Avada Food</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PER LA VISUALIZZAZIONE -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- PER GOOGLE FONT -->
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    <!-- PER FONT AWESOME 5.15.1 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- PER VUE 2 -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- PER IL MIO CSS -->
+
+    <script defer src="js/script.js" charset="utf-8"></script>
+    <!-- PER IL MIO JS -->
+
+  </head>
+  <body>
+    <div id="root">
+
+      <header>
+
+        <section class="nav-bar">
+          <div class="micro-card">
+            <div class="micro-card-top box-shadow">
+              <span><i class="far fa-grin-hearts"></i><br>Demos</span>
+            </div>
+            <div class="micro-card-bottom box-shadow">
+              <span><i class="fas fa-hand-holding-usd"></i><br>On Sale</span>
+            </div>
+          </div>
+          <div class="container">
+            <div class="top-nav-bar">
+              <div class="left-top-nav-bar">
+                <a href="#">Download App <span class="orange-card">IOS</span></a>
+                <a href="#">Advertise with us</a>
+              </div>
+              <div class="right-top-nav-bar">
+                <ul>
+                  <li v-for="icon in socialIcons">
+                    <i v-bind:class="icon"></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="middle-nav-bar">
+              <img src="img/avada-food-logo.png" alt="logo">
+            </div>
+            <div class="bottom-nav-bar">
+              <ul class="container-70">
+                <li><a href="#">Home</a></li>
+                <li v-for="el in navBar"><a href="#">{{el}}</a></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="jumbotron">
+          <div class="container">
+            <div class="sub-container">
+              <div class="top">
+                <div class="jumbotron-card">
+                  <div class="jumbotron-sub-card orange-card">
+                    <span>TODAY'S PICK</span>
+                  </div>
+                  <div class="text">
+                    <h1>Food Corner: Top Japanese Restaurants for Sushi</h1>
+                    <span>March 25, 2019</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom box-shadow">
+                <div class="title">
+                  <div></div>
+                  <p>FOODIE JOURNAL</p>
+                  <div></div>
+                </div>
+                <div class="images">
+                  <div class="sub-images">
+                    <div class="image">
+                      <div class="hover">
+                        <i class="hover fas fa-link"></i>
+                        <h4 class="hover">Food Corner: Top Japanese Restaurants for Sushi</h4>
+                      </div>
+                      <img src="img/single-post-img3-200x132.jpg" alt="immagine cibo">
+                    </div>
+                    <h4>Food Corner: Top Japanese Restaurants for Sushi</h4>
+                    <span>By Admin | March 25th, 2019</span>
+                  </div>
+                  <div class="sub-images">
+                    <div class="image">
+                      <div class="hover">
+                        <i class="hover fas fa-link"></i>
+                        <h4 class="hover">Roundup: My New Favourite Recipes For Healthy Living</h4>
+                      </div>
+                      <img src="img/fi-roundup-200x132.jpg" alt="immagine cibo">
+                    </div>
+                    <h4>Roundup: My New Favourite Recipes For Healthy Living</h4>
+                    <span>By Admin | March 25th, 2019</span>
+                  </div>
+                  <div class="sub-images">
+                    <div class="image">
+                      <div class="hover">
+                        <i class="hover fas fa-link"></i>
+                        <h4 class="hover">Why These Toasts with Tea are My New Favourite</h4>
+                      </div>
+                      <img src="img/fi-toasts-200x132.jpg" alt="immagine cibo">
+                    </div>
+                    <h4>Why These Toasts with Tea are My New Favourite</h4>
+                    <span>By Admin | March 25th, 2019</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </header>
+
+      <main>
+        <div class="container">
+
+          <section class="recipes">
+            <p>POPULAR RECIPES</p>
+            <span class="subtitle">Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus no nunc lacinia lobortis.</span>
+            <div>
+              <div class="left">
+                <div class="image">
+                  <div class="hover">
+                    <i class="hover fas fa-link"></i>
+                    <h4 class="hover">Lunch Favourite with Salad, Naan and Beans</h4>
+                  </div>
+                  <img src="img/Yogurt-Nan-400x263.jpg" alt="immagine cibo">
+                </div>
+                <div class="bottom">
+                  <h4>Lunch Favourite with Salad, Naan and Beans</h4>
+                  <span>Bakery, Featured, Healthy, Latest Recipes, Staff Picks</span>
+                  <div></div>
+                  <p class="subtitle">Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id idgnissim orci leo id</p>
+                  <button class="orange-card" type="button" name="button">LEARN MORE</button>
+                </div>
+              </div>
+              <ul class="right">
+                <li v-for="image in mainRecipesImages">
+                  <div class="hover">
+                    <i class="hover fas fa-link"></i>
+                    <h4 class="hover">{{image.text}}</h4>
+                  </div>
+                  <img v-bind:src="image.url" alt="foto cibo">
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="collection">
+            <p>CULINARY COLLECTION</p>
+            <span class="subtitle">Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus no nunc lacinia lobortis.</span>
+            <ul>
+              <li v-for="card in mainCollectionImages"
+              class="box-shadow">
+                <img v-bind:src="card.image" alt="immagine stilizzata">
+                <span>{{card.text}}</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="table">
+            <section class="table-left">
+              <div class="top">
+                <p>FARM TO TABLE</p>
+                <span class="subtitle">Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus no nunc lacinia lobortis.</span>
+              </div>
+              <div class="big-card">
+                <div class="top-big-card">
+                  <div class="hover">
+                    <i class="hover fas fa-link"></i>
+                    <h4 class="hover">Food Corner: Top Japanese Restaurants for Sushi</h4>
+                  </div>
+                  <img src="img/single-post-img3-400x263.jpg" alt="taglieri">
+                </div>
+                <div class="bottom-big-card">
+                  <h4>Food Corner: Top Japanese Restaurants for Sushi</h4>
+                  <span>By Admin | March 25th, 2019</span>
+                  <div class="space"></div>
+                  <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <span class="special">Read More <i class="fas fa-angle-right"></i></span>
+                </div>
+              </div>
+              <ul class="middle-cards">
+                <li class="middle-card"
+                v-for="card in middleCards">
+                  <div class="image">
+                    <div class="hover">
+                      <i class="hover fas fa-link"></i>
+                      <h4 class="hover">{{card.text}}</h4>
+                    </div>
+                    <img v-bind:src="card.url" alt="immagine esplicativa">
+                  </div>
+                  <div class="text">
+                    <h4>{{card.text}}</h4>
+                    <span>{{card.date}}</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="load">
+                <span>LOAD MORE POSTS</span>
+              </div>
+            </section>
+            <section class="table-right">
+              <div class="top">
+                <button class="orange-card" type="button" name="button">READ OUR BLOG</button>
+              </div>
+              <div class="view-our">
+                <span>VIEW OUR<br>LAST<br>RECIPES</span>
+              </div>
+              <div class="city">
+                <p>City Guide: Singapore</p>
+                <span>VIEW ALL CITY GUIDES</span>
+              </div>
+              <div class="space"></div>
+              <div class="input-text">
+                <i class="fas fa-search"></i>
+                <input autocomplete="off"
+                placeholder="Search..."
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Search...'"
+                type="text" name="" value="">
+              </div>
+              <h5 class="follow-us">Follow Us</h5>
+              <ul class="socials">
+                <li class="social"
+                v-for="icon in socialIcons">
+                  <i v-bind:class="icon"></i>
+                </li>
+                <li class="social">
+                  <i class="fab fa-pinterest-p"></i>
+                </li>
+              </ul>
+              <div class="popular-recent">
+                <div class="popular">
+                  <h5>Popular</h5>
+                </div>
+                <div class="recent">
+                  <h5>Recent</h5>
+                </div>
+              </div>
+              <ul class="small-templates">
+                <li class="small-template"
+                v-for="template in smallTemplate">
+                  <img v-bind:src="template.url" alt="immagine esemplificativa">
+                  <div class="small-template-text">
+                    <p>{{template.text}}</p>
+                    <span>{{template.date}}</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="tweet-card">
+                <div class="header">
+                  <p>Tweets <span>by</span> <span class="theme">@Theme_Fusion</span></p>
+                  <i class="fas fa-info"></i>
+                </div>
+                <div class="main">
+                  <div class="left">
+                    <img src="img/3a74ce3d0532b7773b174c45ca3bd05a_normal.png" alt="logo">
+                  </div>
+                  <div class="right">
+                    <i class="fab fa-twitter"></i>
+                    <h3>ThemeFusion</h3>
+                    <h6>@Theme_Fusion</h6>
+                    <p>Do you need sublime WordPress hosting for your next website? Take advantage of exclusive parner offers that we have secured just for you!</p>
+                    <img src="img/En2TRxLW4AEiWUN.jpeg" alt="immagine nera">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-user-tie"></i>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+
+        </div>
+      </main>
+
+      <footer>
+
+        <section class="subscribe">
+          <h2>Subscrive <span>&</span> Receive A Free eBook</h2>
+          <p class="subtitle">Aliquam erat volutpat. Ut quis ligula  a magna blandit finibus. Suspendisse maximus lacus non nunc lacinia lobortis.</p>
+          <div>
+            <input type="text"
+            autocomplete="off"
+            placeholder="Insert your email...*"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Insert your email...*'"
+            name=""
+            value="">
+            <button type="button"
+            class="orange-card"
+            name="button">SUBSCRIBE</button>
+          </div>
+          <span>Cras portittor pellentesque sem eu pretium.</span>
+        </section>
+
+        <section class="only-images">
+          <ul>
+            <li v-for="image in footerOnlyImages">
+              <img v-bind:src="image" alt="food img">
+            </li>
+          </ul>
+        </section>
+
+        <section class="nav-bar-contacts-and-more">
+          <div class="container">
+            <div class="social">
+              <img src="img/avada-food-logo-mob-2x-200x87.png" alt="logo">
+              <ul>
+                <li v-for="icon in socialIcons">
+                  <i v-bind:class="icon"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-bar">
+              <ul>
+                <li v-for="el in navBar">{{el}}</li>
+              </ul>
+            </div>
+            <div class="contacts">
+              <p>CONTACT</p>
+              <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>775 New York Ave,<br>Brooklyn, Kings, New<br>York 11203</span>
+              </div>
+              <div>
+                <i class="fas fa-phone"></i>
+                <span>+ 0100-505-0000</span>
+              </div>
+              <div>
+                <i class="fas fa-envelope"></i>
+                <span>info@your-domain.com</span>
+              </div>
+            </div>
+            <div class="download">
+              <p>GET OUR APP!</p>
+              <img src="img/download-android.png" alt="google play">
+              <img src="img/download-app-store.png" alt="app store">
+            </div>
+          </div>
+        </section>
+
+        <section class="copyright">
+          <span><i class="far fa-copyright"></i> Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</span>
+        </section>
+
+      </footer>
+    </div>
+  </body>
+</html>
